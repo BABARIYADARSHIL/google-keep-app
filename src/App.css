@@ -1,38 +1,114 @@
-.App {
-  text-align: center;
+
+ * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  background-color: #fbbc05;
+  padding: 10px;
+  display: flex;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header h1 {
+  margin-left: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-note {
+  background-color: #fff;
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+  margin-top: 40px;
+  
+}
+
+.main-note form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  border: 5px solid #fbbc05;
+  border-radius: 20px; 
+  margin-top: 60px;
+
 }
 
-.App-link {
-  color: #61dafb;
+.main-note input,
+.main-note textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  border: 3px solid #ccc;
+  border-radius: 40px;
+  margin-top: 20px;
+  margin-bottom: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.main-note input:focus,
+.main-note textarea:focus {
+  outline: none;
+  border-color: #fbbc05;
+  box-shadow: 0 0 4px rgba(251, 188, 5, 0.7);
+}
+
+.main-note button {
+  margin: 10px auto;
+}
+
+.note {
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.note h1 {
+  font-size: 16pt;
+  color: #9e9e9e;
+  margin-bottom: 15px;
+}
+
+.note p {
+  margin-bottom: 15px;
+}
+
+footer {
+  background-color: #fbbc05;
+  padding: 10px;
+  text-align: center;
+  margin-top: 400px;
+}
+
+footer p {
+  margin: 0;
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .main-note form {
+    max-width: 600px; 
+    margin: 0 auto;
+    padding: 30px;
+    border: 10px solid #fbbc05; 
+    border-radius: 20px; 
+    margin-top: 60px; 
   }
-  to {
-    transform: rotate(360deg);
+
+  .main-note input,
+  .main-note textarea {
+    width: 70%; 
+  }
+
+  .note {
+    margin: 20px auto; 
+    max-width: 600px; 
+  }
+  footer {
+    margin-top: 300px;
   }
 }
